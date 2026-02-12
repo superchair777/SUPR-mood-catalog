@@ -69,7 +69,6 @@ export interface CatalogPage {
   projects?: Project[];
   categories?: CategoryItem[];
   moods?: MoodItem[];
-  hotspots?: Hotspot[];
   pageNumber?: number;
   heroImage?: string; 
   marketingCopy?: string; 

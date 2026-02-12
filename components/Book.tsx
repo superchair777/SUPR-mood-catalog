@@ -23,7 +23,7 @@ const UI_STRINGS: Record<string, any> = {
         enterprise: 'ENTERPRISE PRESENCE',
         standard: 'THE SUPR',
         ethics: 'Ethics & Sustainability',
-        warranty: '15 Year Warranty',
+        warranty: '5 Year Warranty',
         circular: 'Circular System',
         standardSub: 'Standard',
         since: 'SINCE 2010',
@@ -50,7 +50,7 @@ const UI_STRINGS: Record<string, any> = {
         enterprise: 'การปรากฏตัวระดับองค์กร',
         standard: 'SUPR',
         ethics: 'จริยธรรมและความยั่งยืน',
-        warranty: 'รับประกัน 15 ปี',
+        warranty: 'รับประกัน 5 ปี',
         circular: 'ระบบหมุนเวียน',
         standardSub: 'มาตรฐาน',
         since: 'ตั้งแต่ 2010',
@@ -371,31 +371,7 @@ const ClientsLayout = ({ clients, pageNumber, lang }: { clients: Client[], pageN
   );
 }
 
-const HotspotTag: React.FC<{ hotspot: Hotspot, onClick: (id: string) => void }> = ({ hotspot, onClick }) => {
-    return (
-        <button
-            className="absolute z-[100] group cursor-pointer pointer-events-auto"
-            style={{ top: `${hotspot.y}%`, left: `${hotspot.x}%` }}
-            onPointerDown={(e) => { e.stopPropagation(); }}
-            onMouseDown={(e) => { e.stopPropagation(); }}
-            onTouchStart={(e) => { e.stopPropagation(); }}
-            onClick={(e) => {
-                e.stopPropagation();
-                e.preventDefault();
-                onClick(hotspot.targetId);
-            }}
-        >
-            <div className="relative transform transition-transform duration-200 hover:scale-125 active:scale-95">
-                 {/* Expanded hit area */}
-                <div className="absolute -inset-3 bg-transparent rounded-full z-0"></div>
-                <div className="relative z-10 w-4 h-4 md:w-5 md:h-5 bg-supr-gold rounded-full border-[3px] border-white shadow-[0_4px_10px_rgba(0,0,0,0.3)] animate-pulse hover:animate-none"></div>
-                <div className="absolute top-1/2 left-full ml-3 -translate-y-1/2 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-sm shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border-l-2 border-supr-gold">
-                    <span className="text-[10px] md:text-xs font-bold text-slate-900 uppercase tracking-wider">{hotspot.label}</span>
-                </div>
-            </div>
-        </button>
-    );
-};
+
 
 const PageContent = ({ 
     page, 
@@ -413,9 +389,7 @@ const PageContent = ({
     onTagClick?: (id: string) => void
 }) => {
   const t = UI_STRINGS[lang];
-  // State to track which step is currently hovered for tooltip display
-  const [hoveredStepId, setHoveredStepId] = useState<string | null>(null);
-
+  
   if (!page || page.layout === 'empty') {
       return <div className="h-full w-full bg-white"></div>;
   }
@@ -590,8 +564,6 @@ const PageContent = ({
                             <div 
                                 className="flex-1 flex items-center gap-3 md:gap-4 lg:gap-6 p-3 md:p-4 bg-white border border-slate-100 shadow-[0_2px_15px_rgba(0,0,0,0.03)] rounded-sm hover:shadow-lg transition-all duration-500 group relative cursor-pointer"
                                 onClick={() => onZoom?.(step.image)}
-                                onMouseEnter={() => setHoveredStepId(step.id)}
-                                onMouseLeave={() => setHoveredStepId(null)}
                             >
                                 <div className="w-16 h-12 md:w-20 md:h-16 lg:w-24 lg:h-18 overflow-hidden bg-slate-100 flex-shrink-0 border border-slate-200 rounded-sm">
                                     <img src={step.image} alt="" className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700" />
@@ -603,15 +575,6 @@ const PageContent = ({
                             <div className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full border border-slate-100 flex items-center justify-center shadow-sm bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                                 <ChevronRight size={14} className="text-slate-900" strokeWidth={3} />
                             </div>
-                            {/* Render tooltip if this step is hovered (controlled by React state) */}
-                            {hoveredStepId === step.id && (
-                                <div className="absolute right-14 top-1/2 -translate-y-1/2 transition-all duration-300 pointer-events-none z-50">
-                                    <div className="bg-slate-900 text-white text-[8px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg shadow-xl relative whitespace-nowrap animate-bounce">
-                                        Click Me
-                                        <div className="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 bg-slate-900 rotate-45"></div>
-                                    </div>
-                                </div>
-                            )}
                             </div>
                         </div>
                     ))}
@@ -670,7 +633,7 @@ const PageContent = ({
                     <div className="flex gap-4">
                         <div className="flex flex-col">
                             <span className="text-[7px] font-mono text-slate-400 uppercase mb-1">Service</span>
-                            <span className="text-[9px] font-mono text-slate-900">service@supr.work</span>
+                            <span className="text-[9px] font-mono text-slate-900">superwealthoffice@gmail.com</span>
                         </div>
                     </div>
                     <div className="text-right">
@@ -710,7 +673,7 @@ const PageContent = ({
                         <div className="flex items-center gap-6">
                             <div className="flex flex-col">
                                 <span className="text-[7px] text-slate-600 uppercase font-mono tracking-widest mb-1">{t.voice}</span>
-                                <span className="text-[9px] text-white font-mono">+66 2 123 4567</span>
+                                <span className="text-[9px] text-white font-mono">091 815 3818</span>
                             </div>
                         </div>
                         <div className="flex items-center gap-4">
@@ -735,10 +698,7 @@ const PageContent = ({
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 pointer-events-none"></div>
             </div>
             
-            {/* Render Hotspots if available */}
-            {page.hotspots && page.hotspots.map((hotspot, idx) => (
-                <HotspotTag key={idx} hotspot={hotspot} onClick={onTagClick || (() => {})} />
-            ))}
+
 
             <div className="absolute bottom-10 md:bottom-16 left-6 md:left-8 right-6 md:right-8 text-white pointer-events-none">
                 <h2 className="text-2xl md:text-5xl font-sans font-bold tracking-tight mb-2 drop-shadow-md leading-none">

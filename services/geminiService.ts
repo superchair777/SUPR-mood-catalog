@@ -1,9 +1,23 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const apiKey = process.env.API_KEY || '';
+let ai: GoogleGenAI | null = null;
+
+try {
+  if (apiKey) {
+    ai = new GoogleGenAI({ apiKey });
+  } else {
+    console.warn("Gemini API Key is missing. AI features will be disabled.");
+  }
+} catch (error) {
+  console.error("Failed to initialize GoogleGenAI:", error);
+}
 
 export const generateMarketingCopy = async (productName: string, features: string[], lang: string = 'en'): Promise<string> => {
+  if (!ai) {
+    return lang === 'th' ? "ออกแบบมาเพื่อประสิทธิภาพสูงสุด สัมผัสความแตกต่างของ SUPR" : "Engineered for peak performance. Experience the SUPR difference.";
+  }
   try {
     const langNote = lang === 'th' ? 'Respond in Thai.' : 'Respond in English.';
     const prompt = `Write a technical yet sophisticated 35-word product description for an ergonomic furniture piece named "${productName}". 
@@ -24,6 +38,9 @@ export const generateMarketingCopy = async (productName: string, features: strin
 };
 
 export const chatWithSalesAI = async (history: { role: 'user' | 'model', text: string }[], userMessage: string, lang: string = 'en'): Promise<string> => {
+  if (!ai) {
+    return lang === 'th' ? "ขณะนี้ระบบฐานข้อมูลกำลังอยู่ระหว่างการปรับปรุง โปรดลองอีกครั้งในภายหลัง" : "I am currently recalibrating my specifications database. Please try again shortly.";
+  }
   try {
     const langNote = lang === 'th' ? 'Respond in Thai language only.' : 'Respond in English language only.';
     const systemInstruction = `You are an Expert Ergonomic Consultant for SUPR.

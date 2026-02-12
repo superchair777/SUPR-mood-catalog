@@ -1,13 +1,19 @@
 
 import * as React from 'react';
 import { useState } from 'react';
-import { MessageSquare, X, Facebook, Instagram, MessageCircle, Music2 } from 'lucide-react';
+import { MessageSquare, X, Facebook, Instagram, MessageCircle, Music2, Phone } from 'lucide-react';
 
 const SOCIAL_LINKS = [
-  { name: 'Facebook', icon: <Facebook size={18} />, color: 'hover:bg-[#1877F2]' },
-  { name: 'Instagram', icon: <Instagram size={18} />, color: 'hover:bg-[#E4405F]' },
-  { name: 'Tiktok', icon: <Music2 size={18} />, color: 'hover:bg-[#000000]' },
-  { name: 'Line', icon: <MessageCircle size={18} />, color: 'hover:bg-[#06C755]' },
+  { name: 'Facebook', icon: <Facebook size={18} />, color: 'hover:bg-[#1877F2]', action: () => window.open('https://www.facebook.com/suprfactory', '_blank') },
+  { name: 'Instagram', icon: <Instagram size={18} />, color: 'hover:bg-[#E4405F]', action: () => window.open('https://www.instagram.com/supr_factory/', '_blank') },
+  { name: 'Tiktok', icon: <Music2 size={18} />, color: 'hover:bg-[#000000]', action: () => window.open('https://www.tiktok.com/@supr_factory?lang=en', '_blank') },
+  { name: 'Line', icon: <MessageCircle size={18} />, color: 'hover:bg-[#06C755]', action: () => window.open('https://shop.line.me/@superchair', '_blank') },
+  { 
+    name: 'Call Us 091 815 3818', 
+    icon: <Phone size={18} />, 
+    color: 'hover:bg-[#0F1115]',
+    action: () => window.location.href = 'tel:0918153818'
+  },
 ];
 
 export const ChatWidget = ({ currentLang = 'en' }: { currentLang?: string }) => {
@@ -21,7 +27,11 @@ export const ChatWidget = ({ currentLang = 'en' }: { currentLang?: string }) => 
             key={social.name}
             onPointerDown={(e) => e.stopPropagation()}
             onClick={() => {
-              console.log(`Navigating to ${social.name}`);
+              if ('action' in social && social.action) {
+                (social as any).action();
+              } else {
+                console.log(`Navigating to ${social.name}`);
+              }
             }}
             className={`
               flex items-center gap-3 px-4 py-2 rounded-full bg-slate-900/90 backdrop-blur-md 

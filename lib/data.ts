@@ -74,7 +74,7 @@ export const getLocalizedData = (lang: string = 'en'): Sheet[] => {
                 { id: 'm2', title: 'Modern Zen', description: 'อบอุ่น เรียบง่าย สไตล์คาเฟ่', image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800' },
                 { id: 'm3', title: 'Get It Done', description: 'เน้นงานหนัก สมาธิสูง', image: 'https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?auto=format&fit=crop&q=80&w=800' },
                 { id: 'm4', title: 'The Big Boss', description: 'ภูมิฐานและสง่างาม', image: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=800' },
-                { id: 'm5', title: 'Tiny Corner', description: 'จิ๋วแต่แจ๋ว ประหยัดพื้นที่', image: 'https://images.unsplash.com/photo-1486946255434-2466348c2166?auto=format&fit=crop&q=80&w=800' },
+                { id: 'm5', title: 'Minimal', description: 'จิ๋วแต่แจ๋ว ประหยัดพื้นที่', image: 'https://images.unsplash.com/photo-1486946255434-2466348c2166?auto=format&fit=crop&q=80&w=800' },
                 { id: 'm6', title: 'Flexible Work', description: 'ยืดหยุ่น ไฮบริดไลฟ์สไตล์', image: 'https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&q=80&w=800' }
             ]
         }
@@ -103,11 +103,7 @@ export const getLocalizedData = (lang: string = 'en'): Sheet[] => {
             title: 'FRESH AIR',
             subtitle: 'พื้นที่ปลอดโปร่ง',
             marketingCopy: 'ลดความอึดอัด เพิ่มพื้นที่ว่างทางความคิด ด้วยเฟอร์นิเจอร์โทนสว่างและการออกแบบที่เปิดโล่ง เพื่อการทำงานที่สดชื่นตลอดวัน',
-            heroImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200',
-            hotspots: [
-                { x: 30, y: 65, label: 'Aero Chair', targetId: 'm-air-1' },
-                { x: 75, y: 55, label: 'Cloud Desk', targetId: 'm-air-2' }
-            ]
+            heroImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200'
         }
       },
       {
@@ -121,14 +117,24 @@ export const getLocalizedData = (lang: string = 'en'): Sheet[] => {
             pageNumber: 8,
             items: [
                 {
-                    id: 'm-air-1', name: 'AERO CHAIR', category: 'Chair', price: '฿8,900', image: 'https://images.unsplash.com/photo-1505797149-43b0069ec26b?auto=format&fit=crop&q=80&w=800',
-                    description: 'เก้าอี้ตาข่ายสีขาวล้วน ระบายอากาศดีเยี่ยม',
-                    features: ['ตาข่ายระบายความร้อน', 'โครงสีขาว', 'น้ำหนักเบา']
+                    id: 'm-air-1', name: 'H2 Cabinet', category: 'Storage', price: '฿15,000', image: '/images/products/fresh-air/H2 Cabinet.png',
+                    description: 'ตู้เก็บของดีไซน์ทันสมัย จุของได้เยอะ',
+                    features: ['ดีไซน์มินิมอล', 'โครงสร้างแข็งแรง', 'จัดระเบียบง่าย']
                 },
                 {
-                    id: 'm-air-2', name: 'CLOUD DESK', category: 'Table', price: '฿12,500', image: 'https://images.unsplash.com/photo-1519219788971-8d9797e0d299?auto=format&fit=crop&q=80&w=800',
-                    description: 'โต๊ะสีขาวมินิมอล ผิวสัมผัสแบบด้าน',
-                    features: ['ท็อปสีขาว', 'ขาเหล็กเพรียวบาง', 'ทำความสะอาดง่าย']
+                    id: 'm-air-2', name: 'H2 Meeting Table', category: 'Table', price: '฿25,000', image: '/images/products/fresh-air/H2 Meeting Table.jpg',
+                    description: 'โต๊ะประชุมขนาดใหญ่ รองรับการทำงานเป็นทีม',
+                    features: ['ท็อปไม้คุณภาพสูง', 'ขาเหล็กมั่นคง', 'นั่งได้หลายคน']
+                },
+                {
+                    id: 'm-air-3', name: 'H2 Workstation', category: 'Workstation', price: '฿35,000', image: '/images/products/fresh-air/H2 Workstation.png',
+                    description: 'ชุดโต๊ะทำงานแบบกลุ่ม เพิ่มประสิทธิภาพการทำงาน',
+                    features: ['ประหยัดพื้นที่', 'มีฉากกั้นส่วนตัว', 'จัดการสายไฟได้ดี']
+                },
+                {
+                    id: 'm-air-4', name: 'H2 Executive', category: 'Executive', price: '฿45,000', image: '/images/products/fresh-air/H2 executive.png',
+                    description: 'ชุดผู้บริหารระดับพรีเมียม สะท้อนภาพลักษณ์ผู้นำ',
+                    features: ['ดีไซน์หรูหรา', 'วัสดุเกรดพรีเมียม', 'ฟังก์ชันครบครัน']
                 }
             ]
         },
@@ -154,14 +160,29 @@ export const getLocalizedData = (lang: string = 'en'): Sheet[] => {
             pageNumber: 10,
             items: [
                 {
-                    id: 'm-zen-1', name: 'KYOTO CHAIR', category: 'Chair', price: '฿9,500', image: 'https://images.unsplash.com/photo-1596162955779-9c8c7c2ebf06?auto=format&fit=crop&q=80&w=800',
-                    description: 'เก้าอี้ไม้ผสมผ้า ให้ความรู้สึกอบอุ่นเหมือนคาเฟ่',
-                    features: ['ขาไม้จริง', 'เบาะผ้านุ่ม', 'ดีไซน์ญี่ปุ่น']
+                    id: 'm-zen-1', name: 'H10 Cabinet', category: 'Storage', price: '฿16,000', image: '/images/products/modern-zen/H10 Cabinet.png',
+                    description: 'ตู้เก็บของดีไซน์เรียบหรู ผิวสัมผัสไม้ธรรมชาติ',
+                    features: ['จุของได้เยอะ', 'ระบบปิดนุ่มนวล', 'ดีไซน์ทันสมัย']
                 },
                 {
-                    id: 'm-zen-2', name: 'OAK TABLE', category: 'Table', price: '฿15,000', image: 'https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?auto=format&fit=crop&q=80&w=800',
-                    description: 'โต๊ะไม้โอ๊คสีอ่อน ลายไม้ธรรมชาติ',
-                    features: ['ไม้โอ๊คแท้', 'ขอบมน', 'เคลือบด้าน']
+                    id: 'm-zen-2', name: 'H10 Executive', category: 'Executive', price: '฿48,000', image: '/images/products/modern-zen/H10 Executive.png',
+                    description: 'โต๊ะผู้บริหารระดับพรีเมียม สำหรับผู้นำยุคใหม่',
+                    features: ['หน้าโต๊ะกว้าง', 'มีช่องปลั๊กในตัว', 'ดีไซน์สง่างาม']
+                },
+                {
+                    id: 'm-zen-3', name: 'H10 Meeting Table', category: 'Table', price: '฿28,000', image: '/images/products/modern-zen/H10 Meeting Table.png',
+                    description: 'โต๊ะประชุมเพื่อการระดมสมองอย่างสร้างสรรค์',
+                    features: ['โครงสร้างแข็งแรง', 'จัดการสายไฟง่าย', 'นั่งได้ 6-8 คน']
+                },
+                {
+                    id: 'm-zen-4', name: 'H10 Shelf', category: 'Storage', price: '฿12,000', image: '/images/products/modern-zen/H10 Shelf.png',
+                    description: 'ชั้นวางของแบบเปิด โชว์ของสะสมและจัดระเบียบ',
+                    features: ['ปรับระดับชั้นได้', 'โครงเหล็กทนทาน', 'มินิมอลสไตล์']
+                },
+                {
+                    id: 'm-zen-5', name: 'H10 Workstation', category: 'Workstation', price: '฿38,000', image: '/images/products/modern-zen/H10 Workstation.png',
+                    description: 'ชุดโต๊ะทำงานกลุ่ม ออกแบบเพื่อการโฟกัสและลื่นไหล',
+                    features: ['ฉากกั้นส่วนตัว', 'ระดับความสูงเหมาะสม', 'พื้นที่ส่วนกลาง']
                 }
             ]
         },
@@ -187,14 +208,34 @@ export const getLocalizedData = (lang: string = 'en'): Sheet[] => {
             pageNumber: 12,
             items: [
                 {
-                    id: 'm-done-1', name: 'TASK PRO', category: 'Chair', price: '฿12,900', image: 'https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&q=80&w=800',
-                    description: 'เก้าอี้สีดำทรงพลัง รองรับการนั่งทำงานนานๆ',
-                    features: ['ปรับได้ทุกส่วน', 'รับน้ำหนักได้มาก', 'ล้อลื่นพิเศษ']
+                    id: 'm-done-1', name: 'W2 Cabinet', category: 'Storage', price: '฿14,500', image: '/images/products/get-it-done/W2 Cabinet.png',
+                    description: 'ตู้เก็บของดีไซน์ทันสมัย ช่วยจัดระเบียบเอกสารและอุปกรณ์',
+                    features: ['โครงสร้างแข็งแรง', 'จุของได้เยอะ', 'ดีไซน์เรียบหรู']
                 },
                 {
-                    id: 'm-done-2', name: 'FOCUS DESK', category: 'Table', price: '฿18,000', image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&q=80&w=800',
-                    description: 'โต๊ะทำงานสีเข้ม พื้นที่กว้างขวางสำหรับทุกอุปกรณ์',
-                    features: ['ท็อปกันรอย', 'ช่องเก็บสายไฟ', 'โครงสร้างแข็งแกร่ง']
+                    id: 'm-done-2', name: 'W2 Drawer', category: 'Storage', price: '฿4,500', image: '/images/products/get-it-done/W2 Drawer.png',
+                    description: 'ตู้ลิ้นชักอเนกประสงค์ เคลื่อนย้ายสะดวก',
+                    features: ['ล้อเลื่อนลื่นไหล', 'ล็อคกุญแจได้', 'ประหยัดพื้นที่']
+                },
+                {
+                    id: 'm-done-3', name: 'W2 Executive', category: 'Executive', price: '฿42,000', image: '/images/products/get-it-done/W2 Executive.png',
+                    description: 'โต๊ะผู้บริหารระดับพรีเมียม เสริมภาพลักษณ์ผู้นำ',
+                    features: ['ดีไซน์สง่างาม', 'พื้นที่กว้างขวาง', 'วัสดุเกรดพรีเมียม']
+                },
+                {
+                    id: 'm-done-4', name: 'W2 Meeting', category: 'Table', price: '฿24,000', image: '/images/products/get-it-done/W2 Meeting.png',
+                    description: 'โต๊ะประชุมขนาดใหญ่ รองรับการระดมสมอง',
+                    features: ['รองรับการประชุม', 'โครงสร้างมั่นคง', 'จัดการสายไฟง่าย']
+                },
+                {
+                    id: 'm-done-5', name: 'W2 Shelf', category: 'Storage', price: '฿8,900', image: '/images/products/get-it-done/W2 Shelf.png',
+                    description: 'ชั้นวางของอเนกประสงค์ โครงเหล็กแข็งแรง',
+                    features: ['ปรับระดับได้', 'โครงเหล็กทนทาน', 'ดีไซน์โปร่ง']
+                },
+                {
+                    id: 'm-done-6', name: 'W2 Workstation', category: 'Workstation', price: '฿32,000', image: '/images/products/get-it-done/W2 Workstation.png',
+                    description: 'ชุดโต๊ะทำงานกลุ่ม เพิ่มประสิทธิภาพการทำงานทีม',
+                    features: ['เพิ่มความเป็นส่วนตัว', 'จัดการพื้นที่ได้ดี', 'เหมาะกับออฟฟิศยุคใหม่']
                 }
             ]
         },
@@ -220,23 +261,28 @@ export const getLocalizedData = (lang: string = 'en'): Sheet[] => {
             pageNumber: 14,
             items: [
                 {
-                    id: 'm-boss-1', name: 'EMPEROR', category: 'Chair', price: '฿45,000', image: 'https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?auto=format&fit=crop&q=80&w=800',
-                    description: 'เก้าอี้หนังแท้พนักพิงสูง สง่างามและภูมิฐาน',
-                    features: ['หนังแท้เกรดเอ', 'พนักพิงสูงพิเศษ', 'เอนนอนได้']
+                    id: 'm-boss-1', name: 'Executive Workstation', category: 'Workstation', price: '฿65,000', image: '/images/products/the-big-boss/Executive Workstation.png',
+                    description: 'ชุดทำงานผู้บริหารครบวงจร พร้อมตู้เก็บของและพื้นที่กว้างขวาง',
+                    features: ['พื้นที่กว้างขวาง', 'ดีไซน์ทันสมัย', 'วัสดุเกรดพรีเมียม']
                 },
                 {
-                    id: 'm-boss-2', name: 'COMMAND DESK', category: 'Table', price: '฿89,000', image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=800',
-                    description: 'โต๊ะผู้บริหารขนาดใหญ่ พร้อมตู้เก็บของในตัว',
-                    features: ['ไม้เนื้อแข็ง', 'แผ่นบังตา', 'ลิ้นชักนิรภัย']
+                    id: 'm-boss-2', name: 'Luxury Workstation', category: 'Workstation', price: '฿89,000', image: '/images/products/the-big-boss/Luxury Workstation.png',
+                    description: 'สเตชั่นทำงานสุดหรู สะท้อนความสำเร็จและรสนิยมเหนือระดับ',
+                    features: ['หรูหรามีระดับ', 'ฟังก์ชันครบครัน', 'ความเป็นส่วนตัวสูง']
+                },
+                {
+                    id: 'm-boss-3', name: 'Grand Meeting Table', category: 'Table', price: '฿45,000', image: '/images/products/the-big-boss/Meeting Table.png',
+                    description: 'โต๊ะประชุมขนาดใหญ่ รองรับการตัดสินใจสำคัญ',
+                    features: ['รองรับ 10-12 ที่นั่ง', 'โครงสร้างแข็งแกร่ง', 'ช่องร้อยสายไฟในตัว']
                 }
             ]
         },
         back: {
-            id: 'tiny-corner-hero',
+            id: 'minimal-hero',
             type: 'content',
             layout: 'hero',
             pageNumber: 15,
-            title: 'TINY CORNER',
+            title: 'MINIMAL',
             subtitle: 'ความสุขในพื้นที่จำกัด',
             marketingCopy: 'เหมาะสำหรับชีวิตคอนโดที่ทุกตารางนิ้วมีค่า เปลี่ยนมุมเล็กๆ ให้เป็นโฮมออฟฟิศที่มีประสิทธิภาพ โดยไม่กินพื้นที่อยู่อาศัย',
             heroImage: 'https://images.unsplash.com/photo-1486946255434-2466348c2166?auto=format&fit=crop&q=80&w=1200'
@@ -245,22 +291,47 @@ export const getLocalizedData = (lang: string = 'en'): Sheet[] => {
       {
         id: 'sheet-9',
         front: {
-            id: 'tiny-corner-items',
+            id: 'minimal-items',
             type: 'content',
             layout: 'grid',
-            title: 'มุมเล็กสเปซน้อย',
+            title: 'มินิมอล',
             subtitle: 'กะทัดรัดแต่ครบครัน',
             pageNumber: 16,
             items: [
                 {
-                    id: 'm-tiny-1', name: 'NOOK CHAIR', category: 'Chair', price: '฿4,500', image: 'https://images.unsplash.com/photo-1503602642458-23211144584b?auto=format&fit=crop&q=80&w=800',
-                    description: 'เก้าอี้ขนาดกะทัดรัด พับเก็บหรือสอดใต้โต๊ะได้ง่าย',
-                    features: ['ประหยัดพื้นที่', 'ดีไซน์เพรียว', 'นั่งสบาย']
+                    id: 'm-min-1', name: 'Single Workstation', category: 'Table', price: '฿8,500', image: '/images/products/tiny-corner/Single workstation.png',
+                    description: 'โต๊ะทำงานเดี่ยวขนาดกะทัดรัด',
+                    features: ['ประหยัดพื้นที่', 'ดีไซน์มินิมอล', 'ทนทาน']
                 },
                 {
-                    id: 'm-tiny-2', name: 'WALL DESK', category: 'Table', price: '฿6,200', image: 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=800',
-                    description: 'โต๊ะทำงานขนาดเล็ก ยึดผนังหรือพับเก็บได้',
-                    features: ['ลึกเพียง 50cm', 'ชั้นวางในตัว', 'ติดตั้งง่าย']
+                    id: 'm-min-2', name: 'Table with Drawer', category: 'Table', price: '฿10,500', image: '/images/products/tiny-corner/Table with drawer.png',
+                    description: 'โต๊ะเรียบหรูพร้อมลิ้นชักเก็บของ',
+                    features: ['มีลิ้นชักในตัว', 'เส้นสายสะอาดตา', 'แข็งแรง']
+                },
+                {
+                    id: 'm-min-3', name: 'Double Workstation', category: 'Workstation', price: '฿15,500', image: '/images/products/tiny-corner/Double Workstation.png',
+                    description: 'พื้นที่ทำงานสำหรับสองคน',
+                    features: ['แชร์พื้นที่', 'เหมาะกับการทำงานคู่', 'ประหยัดที่']
+                },
+                {
+                    id: 'm-min-4', name: 'White Table', category: 'Table', price: '฿7,000', image: '/images/products/tiny-corner/White Table.png',
+                    description: 'โต๊ะสีขาวเรียบง่ายเข้าได้กับทุกห้อง',
+                    features: ['อเนกประสงค์', 'ทำความสะอาดง่าย', 'ทันสมัย']
+                },
+                {
+                    id: 'm-min-5', name: 'Double Curved Workstation', category: 'Workstation', price: '฿18,500', image: '/images/products/tiny-corner/Double Curved Workstation.png',
+                    description: 'โต๊ะทำงานคู่ดีไซน์โค้งมน เพิ่มพื้นที่ใช้สอย',
+                    features: ['ดีไซน์โค้งรับสรีระ', 'พื้นที่กว้างขวาง', 'เหมาะสำหรับทำงานคู่']
+                },
+                {
+                    id: 'm-min-6', name: 'Meeting Table', category: 'Table', price: '฿12,000', image: '/images/products/tiny-corner/Meeting Table.png',
+                    description: 'โต๊ะประชุมขนาดกะทัดรัดสำหรับทีมเล็ก',
+                    features: ['รองรับ 4-6 ที่นั่ง', 'โครงสร้างแข็งแรง', 'ดีไซน์เรียบง่าย']
+                },
+                {
+                    id: 'm-min-7', name: 'Single Curved Workstation', category: 'Table', price: '฿9,500', image: '/images/products/tiny-corner/Single Curved Workstation.png',
+                    description: 'โต๊ะทำงานเดี่ยวทรงโค้ง เข้ามุมได้ลงตัว',
+                    features: ['เข้ามุมได้ดี', 'ดีไซน์ทันสมัย', 'เพิ่มพื้นที่วางของ']
                 }
             ]
         },
@@ -397,7 +468,7 @@ export const getLocalizedData = (lang: string = 'en'): Sheet[] => {
                 { id: 'm2', title: 'Modern Zen', description: 'Warm wood tones, cafe vibes.', image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800' },
                 { id: 'm3', title: 'Get It Done', description: 'High focus, dark aesthetics.', image: 'https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?auto=format&fit=crop&q=80&w=800' },
                 { id: 'm4', title: 'The Big Boss', description: 'Executive power and status.', image: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=800' },
-                { id: 'm5', title: 'Tiny Corner', description: 'Space-saving efficiency.', image: 'https://images.unsplash.com/photo-1486946255434-2466348c2166?auto=format&fit=crop&q=80&w=800' },
+                { id: 'm5', title: 'Minimal', description: 'Space-saving efficiency.', image: 'https://images.unsplash.com/photo-1486946255434-2466348c2166?auto=format&fit=crop&q=80&w=800' },
                 { id: 'm6', title: 'Flexible Work', description: 'Hybrid work and play.', image: 'https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&q=80&w=800' }
             ]
         }
@@ -442,17 +513,27 @@ export const getLocalizedData = (lang: string = 'en'): Sheet[] => {
           subtitle: 'Recommended',
           pageNumber: 8,
           items: [
-              {
-                  id: 'm-air-1', name: 'AERO CHAIR', category: 'Chair', price: '$450', image: 'https://images.unsplash.com/photo-1505797149-43b0069ec26b?auto=format&fit=crop&q=80&w=800',
-                  description: 'All-white mesh chair designed for maximum breathability.',
-                  features: ['Cool-Mesh', 'White Frame', 'Ultra-Light']
-              },
-              {
-                  id: 'm-air-2', name: 'CLOUD DESK', category: 'Table', price: '$520', image: 'https://images.unsplash.com/photo-1519219788971-8d9797e0d299?auto=format&fit=crop&q=80&w=800',
-                  description: 'Minimalist white desk with matte finish.',
-                  features: ['White Top', 'Slim Legs', 'Easy Clean']
-              }
-          ]
+                {
+                    id: 'm-air-1', name: 'H2 Cabinet', category: 'Storage', price: '$450', image: '/images/products/fresh-air/H2 Cabinet.png',
+                    description: 'Modern design cabinet with ample storage.',
+                    features: ['Minimalist Design', 'Sturdy Structure', 'Easy Organization']
+                },
+                {
+                    id: 'm-air-2', name: 'H2 Meeting Table', category: 'Table', price: '$750', image: '/images/products/fresh-air/H2 Meeting Table.jpg',
+                    description: 'Large meeting table supporting team collaboration.',
+                    features: ['High Quality Top', 'Stable Legs', 'Spacious']
+                },
+                {
+                    id: 'm-air-3', name: 'H2 Workstation', category: 'Workstation', price: '$1,050', image: '/images/products/fresh-air/H2 Workstation.png',
+                    description: 'Group workstation set to boost productivity.',
+                    features: ['Space Saving', 'Privacy Screens', 'Cable Management']
+                },
+                {
+                    id: 'm-air-4', name: 'H2 Executive', category: 'Executive', price: '$1,350', image: '/images/products/fresh-air/H2 executive.png',
+                    description: 'Premium executive set reflecting leadership.',
+                    features: ['Luxury Design', 'Premium Materials', 'Full Functionality']
+                }
+            ]
       },
       back: {
           id: 'modern-zen-hero',
@@ -476,14 +557,29 @@ export const getLocalizedData = (lang: string = 'en'): Sheet[] => {
           pageNumber: 10,
           items: [
               {
-                  id: 'm-zen-1', name: 'KYOTO CHAIR', category: 'Chair', price: '$480', image: 'https://images.unsplash.com/photo-1596162955779-9c8c7c2ebf06?auto=format&fit=crop&q=80&w=800',
-                  description: 'Wood accent chair with soft fabric upholstery.',
-                  features: ['Solid Wood Legs', 'Soft Fabric', 'Japandi Style']
+                  id: 'm-zen-1', name: 'H10 Cabinet', category: 'Storage', price: '$480', image: '/images/products/modern-zen/H10 Cabinet.png',
+                  description: 'Sleek storage solution with natural wood finish.',
+                  features: ['Ample Storage', 'Soft Close', 'Modern Look']
               },
               {
-                  id: 'm-zen-2', name: 'OAK TABLE', category: 'Table', price: '$650', image: 'https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?auto=format&fit=crop&q=80&w=800',
-                  description: 'Light oak table with natural grain texture.',
-                  features: ['Real Oak', 'Rounded Edges', 'Matte Seal']
+                  id: 'm-zen-2', name: 'H10 Executive', category: 'Executive', price: '$1,450', image: '/images/products/modern-zen/H10 Executive.png',
+                  description: 'Premium executive desk for the modern leader.',
+                  features: ['Spacious Top', 'Integrated Power', 'Elegant Design']
+              },
+              {
+                  id: 'm-zen-3', name: 'H10 Meeting Table', category: 'Table', price: '$850', image: '/images/products/modern-zen/H10 Meeting Table.png',
+                  description: 'Collaborative table for creative discussions.',
+                  features: ['Solid Construction', 'Cable Management', 'Seats 6-8']
+              },
+              {
+                  id: 'm-zen-4', name: 'H10 Shelf', category: 'Storage', price: '$350', image: '/images/products/modern-zen/H10 Shelf.png',
+                  description: 'Open shelving unit for display and organization.',
+                  features: ['Adjustable Shelves', 'Sturdy Frame', 'Minimalist']
+              },
+              {
+                  id: 'm-zen-5', name: 'H10 Workstation', category: 'Workstation', price: '$1,150', image: '/images/products/modern-zen/H10 Workstation.png',
+                  description: 'Team workstation designed for focus and flow.',
+                  features: ['Privacy Panels', 'Ergonomic Height', 'Shared Resources']
               }
           ]
       },
@@ -509,14 +605,34 @@ export const getLocalizedData = (lang: string = 'en'): Sheet[] => {
           pageNumber: 12,
           items: [
               {
-                  id: 'm-done-1', name: 'TASK PRO', category: 'Chair', price: '$599', image: 'https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&q=80&w=800',
-                  description: 'High-performance black task chair for heavy workloads.',
-                  features: ['Fully Adjustable', 'Heavy Duty', 'Silent Glide']
+                  id: 'm-done-1', name: 'W2 Cabinet', category: 'Storage', price: '$420', image: '/images/products/get-it-done/W2 Cabinet.png',
+                  description: 'Modern storage cabinet to keep your documents organized.',
+                  features: ['Sturdy Construction', 'Ample Storage', 'Sleek Design']
               },
               {
-                  id: 'm-done-2', name: 'FOCUS DESK', category: 'Table', price: '$750', image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&q=80&w=800',
-                  description: 'Dark grey desk with ample surface area for multiple monitors.',
-                  features: ['Scratch Resistant', 'Cable Tray', 'Sturdy Frame']
+                  id: 'm-done-2', name: 'W2 Drawer', category: 'Storage', price: '$130', image: '/images/products/get-it-done/W2 Drawer.png',
+                  description: 'Versatile mobile drawer unit for personal storage.',
+                  features: ['Smooth Casters', 'Lockable', 'Space Saving']
+              },
+              {
+                  id: 'm-done-3', name: 'W2 Executive', category: 'Executive', price: '$1,250', image: '/images/products/get-it-done/W2 Executive.png',
+                  description: 'Premium executive desk designed for leadership.',
+                  features: ['Elegant Design', 'Spacious Surface', 'Premium Materials']
+              },
+              {
+                  id: 'm-done-4', name: 'W2 Meeting', category: 'Table', price: '$720', image: '/images/products/get-it-done/W2 Meeting.png',
+                  description: 'Large meeting table for collaborative sessions.',
+                  features: ['Collaboration Ready', 'Stable Structure', 'Cable Management']
+              },
+              {
+                  id: 'm-done-5', name: 'W2 Shelf', category: 'Storage', price: '$260', image: '/images/products/get-it-done/W2 Shelf.png',
+                  description: 'Multi-purpose shelf with durable steel frame.',
+                  features: ['Adjustable Shelves', 'Durable Frame', 'Open Design']
+              },
+              {
+                  id: 'm-done-6', name: 'W2 Workstation', category: 'Workstation', price: '$950', image: '/images/products/get-it-done/W2 Workstation.png',
+                  description: 'Group workstation set for team productivity.',
+                  features: ['Enhanced Privacy', 'Space Efficient', 'Modern Office Ready']
               }
           ]
       },
@@ -541,50 +657,80 @@ export const getLocalizedData = (lang: string = 'en'): Sheet[] => {
           subtitle: 'Authority & Status',
           pageNumber: 14,
           items: [
-              {
-                  id: 'm-boss-1', name: 'EMPEROR', category: 'Chair', price: '$1,800', image: 'https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?auto=format&fit=crop&q=80&w=800',
-                  description: 'Premium leather high-back chair for a commanding presence.',
-                  features: ['Top Grain Leather', 'Extra High Back', 'Recliner Mode']
-              },
-              {
-                  id: 'm-boss-2', name: 'COMMAND DESK', category: 'Table', price: '$3,500', image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=800',
-                  description: 'Large executive desk with integrated storage and modesty panel.',
-                  features: ['Solid Wood', 'Modesty Panel', 'Secure Drawers']
-              }
-          ]
+                {
+                    id: 'm-boss-1', name: 'Executive Workstation', category: 'Workstation', price: '$1,950', image: '/images/products/the-big-boss/Executive Workstation.png',
+                    description: 'Complete executive workstation with ample storage and spacious design.',
+                    features: ['Spacious Surface', 'Modern Design', 'Premium Materials']
+                },
+                {
+                    id: 'm-boss-2', name: 'Luxury Workstation', category: 'Workstation', price: '$2,650', image: '/images/products/the-big-boss/Luxury Workstation.png',
+                    description: 'Ultra-luxury workstation reflecting success and superior taste.',
+                    features: ['High-End Luxury', 'Full Functionality', 'High Privacy']
+                },
+                {
+                    id: 'm-boss-3', name: 'Grand Meeting Table', category: 'Table', price: '$1,350', image: '/images/products/the-big-boss/Meeting Table.png',
+                    description: 'Large meeting table designed for important decision-making.',
+                    features: ['Seats 10-12', 'Robust Structure', 'Integrated Cable Management']
+                }
+            ]
       },
       back: {
-          id: 'tiny-corner-hero',
+          id: 'minimal-hero',
           type: 'content',
           layout: 'hero',
           pageNumber: 15,
-          title: 'TINY CORNER',
+          title: 'MINIMAL',
           subtitle: 'Condo Living',
-          marketingCopy: 'Space is a luxury. Designed for condo dwellers or small townhouses. Small footprints, light colors, and furniture that "hides" in the room to maximize your living space.',
+          marketingCopy: 'Ideal for condo living where every inch counts. Transform a small corner into an efficient home office without sacrificing your living space.',
           heroImage: 'https://images.unsplash.com/photo-1486946255434-2466348c2166?auto=format&fit=crop&q=80&w=1200'
       }
     },
     {
       id: 'sheet-9',
       front: {
-          id: 'tiny-corner-items',
+          id: 'minimal-items',
           type: 'content',
           layout: 'grid',
-          title: 'The Tiny Corner',
-          subtitle: 'Space-Saving',
+          title: 'Minimal',
+          subtitle: 'Compact & Complete',
           pageNumber: 16,
           items: [
-              {
-                  id: 'm-tiny-1', name: 'NOOK CHAIR', category: 'Chair', price: '$180', image: 'https://images.unsplash.com/photo-1503602642458-23211144584b?auto=format&fit=crop&q=80&w=800',
-                  description: 'Compact chair that tucks completely under the desk.',
-                  features: ['Space Saver', 'Sleek Profile', 'Comfortable']
-              },
-              {
-                  id: 'm-tiny-2', name: 'WALL DESK', category: 'Table', price: '$250', image: 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=800',
-                  description: 'Small footprint desk, perfect for condos.',
-                  features: ['50cm Depth', 'Built-in Shelf', 'Easy Mount']
-              }
-          ]
+                {
+                    id: 'm-min-1', name: 'Single Workstation', category: 'Table', price: '$250', image: '/images/products/tiny-corner/Single workstation.png',
+                    description: 'Compact workstation for focused tasks.',
+                    features: ['Space Saving', 'Minimal Design', 'Durable']
+                },
+                {
+                    id: 'm-min-2', name: 'Table with Drawer', category: 'Table', price: '$300', image: '/images/products/tiny-corner/Table with drawer.png',
+                    description: 'Sleek table with integrated storage.',
+                    features: ['Built-in Drawer', 'Clean Lines', 'Sturdy']
+                },
+                {
+                    id: 'm-min-3', name: 'Double Workstation', category: 'Workstation', price: '$450', image: '/images/products/tiny-corner/Double Workstation.png',
+                    description: 'Efficient workspace for two.',
+                    features: ['Shared Space', 'Collaborative', 'Compact Footprint']
+                },
+                {
+                    id: 'm-min-4', name: 'White Table', category: 'Table', price: '$200', image: '/images/products/tiny-corner/White Table.png',
+                    description: 'Simple, elegant white table for any room.',
+                    features: ['Versatile', 'Easy Clean', 'Modern']
+                },
+                {
+                    id: 'm-min-5', name: 'Double Curved Workstation', category: 'Workstation', price: '$550', image: '/images/products/tiny-corner/Double Curved Workstation.png',
+                    description: 'Curved double workstation for maximizing space.',
+                    features: ['Ergonomic Curve', 'Spacious', 'Dual Workspace']
+                },
+                {
+                    id: 'm-min-6', name: 'Meeting Table', category: 'Table', price: '$350', image: '/images/products/tiny-corner/Meeting Table.png',
+                    description: 'Compact meeting table for small teams.',
+                    features: ['Seats 4-6', 'Sturdy Build', 'Simple Design']
+                },
+                {
+                    id: 'm-min-7', name: 'Single Curved Workstation', category: 'Table', price: '$280', image: '/images/products/tiny-corner/Single Curved Workstation.png',
+                    description: 'Single curved workstation perfect for corners.',
+                    features: ['Corner Fit', 'Modern Look', 'Extra Surface']
+                }
+            ]
       },
       back: {
           id: 'flexible-work-hero',
